@@ -1,0 +1,48 @@
+PyMOL NOTES:
+
+                           > > > > > > > COMMAND LINE < < < < < < <
+
+Load/save files:
+################################################################################################
+
+- fetch code, [obj_name], [state], [zoom], [type], [async]
+
+  - code    <xxxx> : 4-character identifier for structure
+  - obj_name <str> : The name into which the structure will be loaded
+  - state    <int> : The state number into which the file will be loaded
+  - zoom     <0/1> : Zoom camera to show object {Default is 1}
+
+  Downloads structure file from the internet, places in running directory, and shows on interface
+
+################################################################################################
+
+- load filename, [obj_name], [state], [format]
+
+  - filename <str> : file path / URL
+  - obj_name <str> : The name into which the file will be loaded {default: file prefix}
+  - state    <int> : The state number into which the content will be loaded
+  - format  <.xxx> : pdb, ccp4, cif format of loaded file {default: format of data file}
+
+  Loads specified file into interface. Can be a molecule, PyMOL session, etc.
+
+################################################################################################
+
+- save filename, [selection], [state], [format]
+
+  - filename  <str> : file path to be written
+  - selection <str> : atoms to save {default: (all)}
+  - state     <int> : state to save {default: -1 (current state)}
+
+  Saves file in specified path.
+
+################################################################################################
+
+- run filename, [namespace]
+
+  - filename <str> : a Python script, typically ending in .py / .pym
+  - namespace      : local, global, module, main, private {default: global}
+
+  Executes external python script
+
+################################################################################################
+
