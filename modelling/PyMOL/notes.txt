@@ -44,5 +44,50 @@ Load/save files:
 
   Executes external python script
 
+
+
+
+
+
+
+
+Edit objects:
+################################################################################################
+
+- select name, selection
+
+  - name <str> : A unique name for specified selection {default: sele}
+  - selection  : A selection expression
+
+  Selects objects based on selection expression
+o----------------------------------------------------------------------------------------------o
+|                                                                                              |
+|                                  SELECTION EXPRESSIONS                                       |
+| 
+|  Matching Property Selector     Short Form Selector    Identifier & Example
+
+
+
+                 FINISH THIS TABLE OK?
+
+################################################################################################
+
+- label [selection], [expression]
+
+  - selection  <str> : a selection expression
+  - expression <str> : a python expression which is convertible to string
+
+  Labels selected objects according to expression
+
+################################################################################################
+
+- color [color], [selection]
+
+  - color     <str> : color name or number
+  - selection <str> : selection expression or name-pattern corresponding to objects to be colore
+                      {default: all}
+
+  Colors selected objects a specified color
+
 ################################################################################################
 
