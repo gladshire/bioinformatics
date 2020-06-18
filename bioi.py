@@ -179,3 +179,19 @@ def cons(seq_list):
         cons_arr.append(ind_nt[curr_column.index(max(curr_column))])
 
     return ''.join([cons_arr[i] for i in range(lengt)])
+
+
+ # Given a FASTA file, parse and create adjacency list of specified overlap
+def alist(fasta_dict, overlap):
+
+    adjac_list = []
+
+    for seq_key in fasta_dict:
+        curr_key = seq_key
+        for seq_key in fasta_dict:
+            if fasta_dict[curr_key] == fasta_dict[seq_key]:
+                continue
+            if fasta_dict[curr_key][-overlap:] == fasta_dict[seq_key][:overlap]:
+                adjac_list.append("{} {}".format(curr_key, seq_key))
+  
+    return adjac_list
